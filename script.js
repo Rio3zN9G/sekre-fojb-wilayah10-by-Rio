@@ -1,7 +1,7 @@
 
 const siswa = [
-  { no: 1, nama: "Luciana Muzzayamah", posisi: "Korwil", asalSekolah: "SMKN 1 Kedawung", asalDaerah: "Kab.Cirebon", status: "Hadir" },
-  { no: 2, nama: "Danda Cantika", posisi: "Korda Kota Cirebom", asalSekolah: "SMK Kartika XI", asalDaerah: "Kota Cirebon", status: "Hadir" },
+  { no: 1, nama: "Luciana Muzayyanah", posisi: "Korwil", asalSekolah: "SMKN 1 Kedawung", asalDaerah: "Kab.Cirebon", status: "Hadir" },
+  { no: 2, nama: "Danda Chantika Maulidina", posisi: "Korda Kota Cirebom", asalSekolah: "SMK Kartika XI", asalDaerah: "Kota Cirebon", status: "Hadir" },
   { no: 3, nama: "Nazilatu Mahmudah", posisi: "korda Kab.Cirebon", asalSekolah: "MAN 2 Cirebon", asalDaerah: "Kab.Cirebon", status: "Hadir" },
   { no: 4, nama: "Ario Zulkaesi Nubli", posisi: "Wakorda Kab.Kuningan", asalSekolah: "SMKN Pertiwi Kuningan", asalDaerah: "Kab.Kuningan", status: "Hadir" },
   { no: 5, nama: "Nadya Gkhalbya", posisi: "Wakorda Kab.Cirebon", asalSekolah: "MAN 3 Cirebon", asalDaerah: "Kab.Cirebon", status: "Hadir" },
