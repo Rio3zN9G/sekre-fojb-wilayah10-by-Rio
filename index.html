@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Sekretaris Wilayah 10</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #28a745;">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="logo.png" alt="Logo" style="width: 40px; height: 40px; margin-right: 10px;">
+        Sekre Wilayah 10
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#" onclick="showPage('home')">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" onclick="showPage('absensi')">Absensi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" onclick="showPage('riwayat')">Riwayat</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  
+  <div id="homePage" class="page" style="display: block;">
+    <div class="container mt-5">
+      <h2>Halooo The Next Sekre</h2>
+      <p>Selamat datang (COMING SOON) Selaku Sekretaris Wilayah 10, Ini adalah laman kerja anda yang di buat oleh developer : Ario Zulkaesi Nubli dari SMK Pertiwi Kuningan Kab.Kuningan</p>
+
+     
+      <div class="album py-5 bg-light">
+        <div class="container">
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <div class="col">
+              <div class="card shadow-sm">
+                <img src="album1.png" alt="Album 1" class="bd-placeholder-img card-img-top" width="100%" height="225">
+                <div class="card-body">
+                  <p class="card-text">SMILE</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <img src="album2.jpg" alt="Album 2" class="bd-placeholder-img card-img-top" width="100%" height="225">
+                <div class="card-body">
+                  <p class="card-text">SMILE</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <img src="album3.jpg" alt="Album 3" class="bd-placeholder-img card-img-top" width="100%" height="225">
+                <div class="card-body">
+                  <p class="card-text">G'11 & 12 Sayya Caffe</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <div id="absensiPage" class="page" style="display: none;">
+    <div class="container mt-5">
+      <h2>Absensi Kehadiran Rapat</h2>
+      <table class="table table-bordered table-striped">
+        <thead class="table-dark">
+          <tr>
+            <th>No</th>
+            <th>Nama</th>
+            <th>Managament</th>
+            <th>Asal Sekolah</th>
+            <th>Asal Daerah</th>
+            <th>Status Kehadiran</th>
+          </tr>
+        </thead>
+        <tbody id="absensiTable">
+         
+        </tbody>
+      </table>
+      <button class="btn btn-primary" onclick="saveAbsensi()">Simpan</button>
+    </div>
+  </div>
+
+  <div id="riwayatPage" class="page" style="display: none;">
+    <div class="container mt-5">
+      <h2>Riwayat Absensi</h2>
+      <form id="riwayatForm" onsubmit="saveRiwayat(event)">
+        <div class="mb-3">
+          <label for="tanggal" class="form-label">Tanggal</label>
+          <input type="date" id="tanggal" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-success">Simpan Riwayat</button>
+        <button type="button" class="btn btn-info" onclick="exportPDF()">Ekspor ke PDF</button>
+        <button type="button" class="btn btn-warning" onclick="exportToDevice()">Simpan ke Perangkat</button>
+        <button type="button" class="btn btn-danger" onclick="clearRiwayat()">Hapus Semua Riwayat</button>
+        
+      </form>
+      <ul id="riwayatList" class="mt-4">
+        
+      </ul>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
